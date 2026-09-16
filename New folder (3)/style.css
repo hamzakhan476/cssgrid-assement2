@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #292d5a;
+    font-family: Arial, sans-serif;
+    padding: 40px;
+}
+
+/* Main Grid */
+.grid-container {
+    width: 420px;
+    height: 210px;
+    margin: auto;
+
+    display: grid;
+
+    /* 4 columns */
+    grid-template-columns: 95px 100px 100px 100px;
+
+    /* 3 rows */
+    grid-template-rows: 63px 63px 63px;
+
+    gap: 10px;
+}
+
+/* All boxes */
+.box {
+    border: 2px solid #292d5a;
+}
+
+/* Green */
+.box1,
+.box2,
+.box8 {
+    background-color: #69bd4d;
+}
+
+/* Red */
+.box3,
+.box5,
+.box6 {
+    background-color: #ef3038;
+}
+
+/* Orange */
+.box4,
+.box7 {
+    background-color: #ffae2b;
+}
+
+
+/* LEFT GREEN BOX */
+.box1 {
+    grid-column: 1;
+    grid-row: 1 / 4;
+}
+
+
+/* TOP GREEN BOX */
+.box2 {
+    grid-column: 2 / 4;
+    grid-row: 1;
+}
+
+
+/* TOP RIGHT RED BOX */
+.box3 {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+
+/* MIDDLE ORANGE BOX */
+.box4 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+
+/* MIDDLE RED BOX */
+.box5 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+
+/* BOTTOM RED BOX */
+.box6 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+
+/* BOTTOM ORANGE BOX */
+.box7 {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+
+/* RIGHT GREEN BOX */
+.box8 {
+    grid-column: 4;
+    grid-row: 2 / 4;
+}
+
+
+/* Heading */
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    font-family: Georgia, serif;
+    font-size: 42px;
+}
