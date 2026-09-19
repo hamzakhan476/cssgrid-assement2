@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Grid</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            background: #292d59;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+
+            display: grid;
+
+            /* 4 columns */
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+            /* 3 rows */
+            grid-template-rows: 1fr 1fr 1fr;
+
+            gap: 10px;
+
+            padding: 20px;
+        }
+
+        .box {
+            border: 2px solid #292d59;
+            min-width: 0;
+            min-height: 0;
+        }
+
+        /* Green */
+        .green {
+            background: #69bf4b;
+        }
+
+        /* Red */
+        .red {
+            background: #f02f35;
+        }
+
+        /* Orange */
+        .orange {
+            background: #ffb32b;
+        }
+
+        /* Left tall box */
+        .box1 {
+            grid-column: 1;
+            grid-row: 1 / 4;
+        }
+
+        /* Top middle green */
+        .box2 {
+            grid-column: 2 / 4;
+            grid-row: 1;
+        }
+
+        /* Top right red */
+        .box3 {
+            grid-column: 4;
+            grid-row: 1;
+        }
+
+        /* Middle orange */
+        .box4 {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        /* Middle red */
+        .box5 {
+            grid-column: 3;
+            grid-row: 2;
+        }
+
+        /* Bottom red */
+        .box6 {
+            grid-column: 2;
+            grid-row: 3;
+        }
+
+        /* Bottom orange */
+        .box7 {
+            grid-column: 3;
+            grid-row: 3;
+        }
+
+        /* Right tall green */
+        .box8 {
+            grid-column: 4;
+            grid-row: 2 / 4;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+                gap: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="box box1 green"></div>
+
+        <div class="box box2 green"></div>
+
+        <div class="box box3 red"></div>
+
+        <div class="box box4 orange"></div>
+
+        <div class="box box5 red"></div>
+
+        <div class="box box6 red"></div>
+
+        <div class="box box7 orange"></div>
+
+        <div class="box box8 green"></div>
+
+    </div>
+
+</body>
+</html>
